@@ -1,24 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlumnoVersion2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Indice" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kaW-6Y-sBq">
+                                <rect key="frame" x="20" y="94" width="249" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTd-ry-VFE">
+                                <rect key="frame" x="291" y="94" width="103" height="30"/>
+                                <state key="normal" title="Ver examen"/>
+                                <connections>
+                                    <action selector="btnVerExamen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tQb-fL-7zx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geC-3w-epA">
+                                <rect key="frame" x="20" y="308" width="374" height="250"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcU-vT-wml">
+                                <rect key="frame" x="102" y="683" width="210" height="30"/>
+                                <state key="normal" title="Insertar Examen"/>
+                                <connections>
+                                    <segue destination="H6b-V4-rML" kind="show" identifier="CREAR" id="GjC-aX-XLj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yTd-ry-VFE" secondAttribute="trailing" constant="20" id="F4A-w5-aKV"/>
+                            <constraint firstItem="kaW-6Y-sBq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="NXB-yF-EJD"/>
+                            <constraint firstItem="geC-3w-epA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XmF-q1-wMj"/>
+                            <constraint firstItem="kaW-6Y-sBq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="YAu-oh-h51"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RcU-vT-wml" secondAttribute="bottom" constant="149" id="bCG-A8-XrK"/>
+                            <constraint firstItem="geC-3w-epA" firstAttribute="top" secondItem="kaW-6Y-sBq" secondAttribute="bottom" constant="180" id="m4L-mR-a6V"/>
+                            <constraint firstItem="RcU-vT-wml" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="102" id="mAe-1i-jI8"/>
+                            <constraint firstItem="yTd-ry-VFE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="sb4-cf-UmM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RcU-vT-wml" secondAttribute="trailing" constant="102" id="vkw-IO-Zqa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lbResultado" destination="geC-3w-epA" id="slx-wI-Dea"/>
+                        <outlet property="txtIndice" destination="kaW-6Y-sBq" id="8cH-Xr-LzC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="133.92857142857142"/>
+        </scene>
+        <!--Crear Examen View Controller-->
+        <scene sceneID="pd0-Zp-aDT">
+            <objects>
+                <viewController id="H6b-V4-rML" customClass="CrearExamenViewController" customModule="AlumnoVersion2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1vH-gy-d0H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mdy-D7-gBh">
+                                <rect key="frame" x="20" y="50" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total Preguntas" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fS7-et-Tmj">
+                                <rect key="frame" x="20" y="134" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total Acertadas" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vzL-OY-jcJ">
+                                <rect key="frame" x="20" y="218" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xaf-fo-Tza">
+                                <rect key="frame" x="20" y="332" width="374" height="30"/>
+                                <state key="normal" title="Crear Examen"/>
+                                <connections>
+                                    <action selector="btnCrearExamen:" destination="H6b-V4-rML" eventType="touchUpInside" id="qw5-qi-HXg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aj8-Gv-aux"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aj8-Gv-aux" firstAttribute="trailing" secondItem="Xaf-fo-Tza" secondAttribute="trailing" constant="20" id="7m4-ro-5dC"/>
+                            <constraint firstItem="vzL-OY-jcJ" firstAttribute="leading" secondItem="aj8-Gv-aux" secondAttribute="leading" constant="20" id="AXZ-vy-N8J"/>
+                            <constraint firstItem="aj8-Gv-aux" firstAttribute="trailing" secondItem="vzL-OY-jcJ" secondAttribute="trailing" constant="20" id="O1J-sl-NOJ"/>
+                            <constraint firstItem="fS7-et-Tmj" firstAttribute="leading" secondItem="aj8-Gv-aux" secondAttribute="leading" constant="20" id="W4e-9i-ojs"/>
+                            <constraint firstItem="vzL-OY-jcJ" firstAttribute="top" secondItem="fS7-et-Tmj" secondAttribute="bottom" constant="50" id="YwB-iS-9hi"/>
+                            <constraint firstItem="aj8-Gv-aux" firstAttribute="trailing" secondItem="Mdy-D7-gBh" secondAttribute="trailing" constant="20" id="a4n-X0-vfK"/>
+                            <constraint firstItem="Xaf-fo-Tza" firstAttribute="top" secondItem="vzL-OY-jcJ" secondAttribute="bottom" constant="80" id="bze-gf-bTl"/>
+                            <constraint firstItem="aj8-Gv-aux" firstAttribute="trailing" secondItem="fS7-et-Tmj" secondAttribute="trailing" constant="20" id="d14-6w-JhM"/>
+                            <constraint firstItem="fS7-et-Tmj" firstAttribute="top" secondItem="Mdy-D7-gBh" secondAttribute="bottom" constant="50" id="jDU-S8-Mah"/>
+                            <constraint firstItem="Mdy-D7-gBh" firstAttribute="leading" secondItem="aj8-Gv-aux" secondAttribute="leading" constant="20" id="rg3-I4-Wbb"/>
+                            <constraint firstItem="Mdy-D7-gBh" firstAttribute="top" secondItem="aj8-Gv-aux" secondAttribute="top" constant="50" id="vuc-hh-Bhn"/>
+                            <constraint firstItem="Xaf-fo-Tza" firstAttribute="leading" secondItem="aj8-Gv-aux" secondAttribute="leading" constant="20" id="wu2-4D-Lqo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qrb-Ra-yzA"/>
+                    <connections>
+                        <outlet property="txtNombre" destination="Mdy-D7-gBh" id="ILF-He-Idg"/>
+                        <outlet property="txtTotalAcertadas" destination="vzL-OY-jcJ" id="Jlr-wt-ZVQ"/>
+                        <outlet property="txtTotalPreguntas" destination="fS7-et-Tmj" id="FfP-WB-gmn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKm-QN-L0P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950.72463768115949" y="133.92857142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

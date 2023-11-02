@@ -15,6 +15,9 @@
 		666DA52B2AF3BBD600B76255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666DA5292AF3BBD600B76255 /* LaunchScreen.storyboard */; };
 		666DA5362AF3BBD600B76255 /* AlumnoVersion2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666DA5352AF3BBD600B76255 /* AlumnoVersion2Tests.swift */; };
 		666DA5412AF3BBD700B76255 /* AlumnoVersion2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666DA5402AF3BBD700B76255 /* AlumnoVersion2UITests.swift */; };
+		666DA5522AF3BBFA00B76255 /* Examen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666DA5512AF3BBFA00B76255 /* Examen.swift */; };
+		666DA5572AF3C12A00B76255 /* CrearExamenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666DA5562AF3C12A00B76255 /* CrearExamenViewController.swift */; };
+		666DA55C2AF3C32100B76255 /* ObtenerExamen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666DA55B2AF3C32100B76255 /* ObtenerExamen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		666DA53C2AF3BBD700B76255 /* AlumnoVersion2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlumnoVersion2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		666DA5402AF3BBD700B76255 /* AlumnoVersion2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlumnoVersion2UITests.swift; sourceTree = "<group>"; };
 		666DA5422AF3BBD700B76255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		666DA5512AF3BBFA00B76255 /* Examen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Examen.swift; sourceTree = "<group>"; };
+		666DA5562AF3C12A00B76255 /* CrearExamenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearExamenViewController.swift; sourceTree = "<group>"; };
+		666DA55B2AF3C32100B76255 /* ObtenerExamen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObtenerExamen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				666DA5272AF3BBD600B76255 /* Assets.xcassets */,
 				666DA5292AF3BBD600B76255 /* LaunchScreen.storyboard */,
 				666DA52C2AF3BBD600B76255 /* Info.plist */,
+				666DA5512AF3BBFA00B76255 /* Examen.swift */,
+				666DA5562AF3C12A00B76255 /* CrearExamenViewController.swift */,
+				666DA55B2AF3C32100B76255 /* ObtenerExamen.swift */,
 			);
 			path = AlumnoVersion2;
 			sourceTree = "<group>";
@@ -259,8 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				666DA5232AF3BBD600B76255 /* ViewController.swift in Sources */,
+				666DA5572AF3C12A00B76255 /* CrearExamenViewController.swift in Sources */,
+				666DA5522AF3BBFA00B76255 /* Examen.swift in Sources */,
 				666DA51F2AF3BBD600B76255 /* AppDelegate.swift in Sources */,
 				666DA5212AF3BBD600B76255 /* SceneDelegate.swift in Sources */,
+				666DA55C2AF3C32100B76255 /* ObtenerExamen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
