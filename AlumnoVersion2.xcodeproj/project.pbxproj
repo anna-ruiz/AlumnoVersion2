@@ -18,6 +18,8 @@
 		666DA5522AF3BBFA00B76255 /* Examen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666DA5512AF3BBFA00B76255 /* Examen.swift */; };
 		666DA5572AF3C12A00B76255 /* CrearExamenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666DA5562AF3C12A00B76255 /* CrearExamenViewController.swift */; };
 		666DA55C2AF3C32100B76255 /* ObtenerExamen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666DA55B2AF3C32100B76255 /* ObtenerExamen.swift */; };
+		66E6F7902AFD087600440507 /* CeldaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E6F78F2AFD087600440507 /* CeldaTableViewCell.swift */; };
+		66E6F7952AFD0CED00440507 /* ModificarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E6F7942AFD0CED00440507 /* ModificarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		666DA5512AF3BBFA00B76255 /* Examen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Examen.swift; sourceTree = "<group>"; };
 		666DA5562AF3C12A00B76255 /* CrearExamenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearExamenViewController.swift; sourceTree = "<group>"; };
 		666DA55B2AF3C32100B76255 /* ObtenerExamen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObtenerExamen.swift; sourceTree = "<group>"; };
+		66E6F78F2AFD087600440507 /* CeldaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaTableViewCell.swift; sourceTree = "<group>"; };
+		66E6F7942AFD0CED00440507 /* ModificarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModificarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				666DA5512AF3BBFA00B76255 /* Examen.swift */,
 				666DA5562AF3C12A00B76255 /* CrearExamenViewController.swift */,
 				666DA55B2AF3C32100B76255 /* ObtenerExamen.swift */,
+				66E6F78F2AFD087600440507 /* CeldaTableViewCell.swift */,
+				66E6F7942AFD0CED00440507 /* ModificarViewController.swift */,
 			);
 			path = AlumnoVersion2;
 			sourceTree = "<group>";
@@ -271,6 +277,8 @@
 				666DA5572AF3C12A00B76255 /* CrearExamenViewController.swift in Sources */,
 				666DA5522AF3BBFA00B76255 /* Examen.swift in Sources */,
 				666DA51F2AF3BBD600B76255 /* AppDelegate.swift in Sources */,
+				66E6F7902AFD087600440507 /* CeldaTableViewCell.swift in Sources */,
+				66E6F7952AFD0CED00440507 /* ModificarViewController.swift in Sources */,
 				666DA5212AF3BBD600B76255 /* SceneDelegate.swift in Sources */,
 				666DA55C2AF3C32100B76255 /* ObtenerExamen.swift in Sources */,
 			);

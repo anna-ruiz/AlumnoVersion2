@@ -7,38 +7,58 @@
 
 import UIKit
 
-class ViewController: UIViewController, ObtenerExamen{
-    @IBOutlet weak var txtIndice: UITextField!
+class ViewController: UIViewController, ObtenerExamen, UITableViewDelegate, UITableViewDataSource{
+  
+    
+   
+    
+    @IBOutlet weak var tablaExamenes: UITableView!
     var listaExamenes: [Examen]!
     
-    @IBOutlet weak var lbResultado: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         listaExamenes = [] //inicializamos la lista
         
+        
+        tablaExamenes.delegate = self
+        tablaExamenes.dataSource = self
+        
+    }
+    //MEtodos necesarios del prrotocolo
+    func eliminar(posicion: Int) {
+        listaExamenes.remove(at: posicion)
+        tablaExamenes.reloadData()
+    }
+    
+    func modificar(posicion: Int, nuevoExamen: Examen) {
+        listaExamenes[posicion] = nuevoExamen
+        tablaExamenes.reloadData()
     }
 
    
-    @IBAction func btnVerExamen(_ sender: Any) {
-        
-        let indice = txtIndice.text!
-        
-        if !indice.isEmpty && Int(indice)! >= 1 && Int(indice)! <= listaExamenes.count {
-            lbResultado.text = listaExamenes[Int(indice)! - 1].toString()
-        }else{
-            lbResultado.text = "Error en el indice"
-            
-        }
-        
+    //Dos metodos q implementamos ya que los necesita el delegate/datasource
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        listaExamenes.count
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let celda = tableView.dequeueReusableCell(withIdentifier: "CELDA", for: indexPath) as! CeldaTableViewCell //Se uusa para luego poder rellenar la celda
+        
+        let examen = listaExamenes[indexPath.row]
+        celda.lbNombre.text = examen.nombre
+        celda.lbNota.text = String(examen.notaFinal)
+        
+        return celda
+    }
     
 
     //Implementamos la funcion del protocolo
     func obtener(dato: Examen) {
         listaExamenes.append(dato)//Q añade el examen q recibimos a la lista
+        tablaExamenes.reloadData()
     }
     
     //Implementamos el prepare para
@@ -47,6 +67,16 @@ class ViewController: UIViewController, ObtenerExamen{
             let destino = segue.destination as! CrearExamenViewController
             destino.delegate = self
         }
+        
+        if  segue.identifier == "MODIFICAR" {
+            let destino = segue.destination as! ModificarViewController
+            destino.examen = listaExamenes [tablaExamenes.indexPathForSelectedRow!.row]
+            destino.posicion = tablaExamenes.indexPathForSelectedRow!.row
+            
+            destino.delegate = self
+        }
+        
+        
     }
     
 }
